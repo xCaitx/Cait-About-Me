@@ -10,6 +10,10 @@
     margin: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body{ 
     display: flex;
     flex-direction: column;
@@ -39,13 +43,15 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--coral)
+    color: var(--coral);
+    /* text-shadow: 1px 1px 1px #6e8788; */
 }
 
 h2 {
     font-size: 40px;
     text-shadow: 1px 1px 1px var(--shadow);
 }
+
 
 .nav-links ul{
     display: flex; 
@@ -61,6 +67,7 @@ h2 {
     text-decoration: none;
     transition: 0.5s;
 }
+
 .nav-links a:hover {
     color: #6e8788;
     text-decoration: underline;
@@ -86,35 +93,36 @@ section {
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
-    grid-gap: 15px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+   margin-left: -1.5rem;
+   margin-right: -1.5rem;
 }
 
 ul#portfolio {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: ;
-    padding: 0;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+
 }
+
 ul#portfolio:after {
     content: "";
     display: block;
     
 }
-
 #portfolio li {
-    height: 10%;
+    height: 20%;
     flex-grow: 1;
     margin: 0 25px 25px 0;
-    list-style: none;
-}
+    }
+    
 #portfolio img{
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
+    max-width: 25%;
+    align-items: center;
     border: 5px solid white;
     border-radius: 0.5rem;
     box-shadow: 3px 3px 3px #6e8788;
@@ -128,7 +136,7 @@ ul#portfolio:after {
 .float-left {
     float: left;
     margin-right: 25px;
-    height: 280px;
+    height: 480px;
 }
 
 .float-right {
@@ -138,11 +146,13 @@ ul#portfolio:after {
 
 .hobbies {
     display: flex;
-    padding: 10px 0px 0px;
-    }
+    margin-left: 50%;
+}
     
-.hobbies li a{
-    text-align: center;
+.hobbies li{
+    text-align: left;
+    list-style: square;
+    padding: 0.5em;
 }
 
 .footer {
