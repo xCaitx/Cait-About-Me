@@ -125,7 +125,7 @@ section {
 
 .row1 img{
     height: 100vh;
-    margin-left: 33.333%;
+    margin-left: 30%;
 }
 
 .row2{
@@ -196,46 +196,33 @@ section {
 
 
 /* Mobile */
+
 @media screen and (min-width: 480px) {
-    .gallery {
-        flex: 0 0 50%;
-        max-width: 50%
+    
     }
-}
+
 /* Tablets */
 @media screen and (min-width: 481px) and (max-width: 767px) {
-    .gallery {
-        flex: 0 0 50%;
-        max-width: 50%
+    
     }
-}
+
 
 /* Tablet portait mode*/
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .gallery {
-        flex: 0 0 50%;
-        max-width: 50%
+   
     }   
 
     .gallery:last-child {
-        flex-grow: 1;
+        
     }
-}
 
 /* Laptop and Desktop */
     @media screen and (min-width: 1025) and (max-width: 1280) {
-    header {
-        width: 75%;
+    
     }
-    #portfolio {
-        flex: 0 0 33.333%;
-        max-width: 33.333%;
-    }
-}
+        
 /* Large Screens */
     @media screen and (min-width: 1281) {
-    header {
-        width: 75%;
+    
     }
-}
