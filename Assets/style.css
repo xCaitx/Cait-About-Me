@@ -77,29 +77,33 @@ section {
     Padding: 4%
 }
 
-#content {
+#about-me {
     position: relative;
     padding: 4%;
     text-align:justify;
+}
+
+#about-me-image {
+    min-height: 20vh;
 }
 
 #sidebar {
     background: #f1bca8;
     color: black;
     position: absolute;
-    height: 200%;
-    width: 28.5%;
+    height: 250%;
+    width: 22.5%;
     padding: 2%;
     font-size: 20px;
     margin-left: 4%;
-    margin-top: 8%;
-    margin-bottom: 8%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .gallery {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
     justify-content: center;
 }
 
@@ -109,7 +113,7 @@ section {
 
 #portfolio img{
     border: 5px solid white;
-    border-radius: 6.5rem;
+    border-radius: 10rem;
     box-shadow: 5px 5px px #6e8788;
     transition: 0.5s; 
 }
@@ -119,24 +123,24 @@ section {
     transform: scale(1.1);
 }
 
-#portfolio:after {
-    content: "";
-}
-
 .row1 img{
     height: 100vh;
-    margin-left: 30%;
+    margin-left: 50%;
+    border-radius: 10rem;
 }
 
 .row2{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    gap: 30px;
-    justify-content: space-between;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-left: 33.333%;
 }
 
 .row3 {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     gap: 30px;
     justify-content: space-evenly;
@@ -146,12 +150,8 @@ section {
 .float-left {
     float: left;
     margin-right: 25px;
-    height: 480px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
+    height: 380px;
+    border-radius: 10rem;
 }
 
 .hobbies {
@@ -194,35 +194,22 @@ section {
     }
   
 
-
-/* Mobile */
-
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 800px) {
+     .row1 img{
+        max-height: 40vh;
+        margin-left: 50%;
+    }
     
+    .row2 img, .row3 img{
+        max-height: 20vh;
+        gap: 10px;
+        justify-content: space-evenly;
+        margin-left: 20%;
     }
-
-/* Tablets */
-@media screen and (min-width: 481px) and (max-width: 767px) {
-    
+    #sidebar {
+        font-size: 15px;
     }
-
-
-/* Tablet portait mode*/
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-   
-    }   
-
-    .gallery:last-child {
-        
+    #sidebar h2{
+        font-size: 20px;
     }
-
-/* Laptop and Desktop */
-    @media screen and (min-width: 1025) and (max-width: 1280) {
-    
-    }
-        
-/* Large Screens */
-    @media screen and (min-width: 1281) {
-    
-    }
+}
